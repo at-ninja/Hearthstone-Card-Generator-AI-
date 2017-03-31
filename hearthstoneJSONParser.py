@@ -8,6 +8,8 @@ def main(filename : str) -> None:
     with open(filename) as fp:
 
         cards = json.load(fp)
+
+    cards.sort(key=lambda card: card["name"].lower())
     
     with open(filename + '_formatted.txt', 'w') as fp:
         for card in cards:

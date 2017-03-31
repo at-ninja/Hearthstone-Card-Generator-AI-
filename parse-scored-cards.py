@@ -1,15 +1,18 @@
 import json
 
-filename = "scored-cards.json"
+filename = "data/scored-cards.json"
 
 def main():
 	with open(filename) as fp:
 	
 		cards = json.load(fp)
+
+	cards = cards["Cards"]
+	cards.sort(key=lambda card: card["Name"])
 	
 	#scored-cards.json_formatted.txt      lol
 	with open(filename + "_formatted.txt", "w") as fp:
-		for card in cards["Cards"]:
+		for card in cards:
 			name = card["Name"]
 			scores = card["Scores"]
 			

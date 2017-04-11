@@ -7,7 +7,7 @@ from keras.callbacks import ModelCheckpoint
 from keras.utils import np_utils
 
 
-def main(filename):
+def main(filename, mode):
 
     raw_text = ''
     with open(filename) as fp:
@@ -19,6 +19,7 @@ def main(filename):
 
     chars = sorted(list(set(raw_text)))
     char_to_int = dict((c, i) for i, c in enumerate(chars))
+    int_to_char = dict((i, c) for i, c in enumerate(chars))
 
     n_chars = len(raw_text)
     n_vocab = len(chars)
@@ -56,8 +57,18 @@ def main(filename):
     model = Sequential()
     model.add(LSTM(256, input_shape=(X.shape[1], X.shape[2])))
     model.add(Dropout(0.2))
+    # model.add(LSTM(256))
+    # model.add(Dropout(0.2))
     model.add(Dense(y.shape[1], activation='softmax'))
     model.compile(loss='categorical_crossentropy', optimizer='adam')
+
+    if mode == 'create':
+        create_rnn(X, y)
+    elif mode == 'predict':
+        generate(dataX, int_to_char, n_vocab, model)
+
+
+def create_rnn(X, y, model):
 
     # define the checkpoint
 
@@ -68,6 +79,31 @@ def main(filename):
     model.fit(X, y, epochs=20, batch_size=128, callbacks=callbacks_list)
 
 
+def generate(dataX, int_to_char, n_vocab, model):
+
+    # load the network weights
+    filename = "checkpoints/weights-improvement-19-0.7472.hdf5"
+    model.load_weights(filename)
+    model.compile(loss='categorical_crossentropy', optimizer='adam')
+    # pick a random seed
+    start = numpy.random.randint(0, len(dataX)-1)
+    pattern = dataX[start]
+    print("Seed:")
+    print("\"" + ''.join([int_to_char[value] for value in pattern]) + "\"")
+    # generate characters
+    for i in range(1000):
+        x = numpy.reshape(pattern, (1, len(pattern), 1))
+        x = x / float(n_vocab)
+        prediction = model.predict(x, verbose=0)
+        index = numpy.argmax(prediction)
+        result = int_to_char[index]
+        seq_in = [int_to_char[value] for value in pattern]
+        print(result, end='')
+        pattern.append(index)
+        pattern = pattern[1:len(pattern)]
+    print("\nDone.")
+
+
 if __name__=='__main__':
     import sys
-    sys.exit(main(sys.argv[1]))
+    sys.exit(main(sys.argv[1], sys.argv[2]))

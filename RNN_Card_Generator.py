@@ -57,13 +57,13 @@ def main(filename, mode):
     model = Sequential()
     model.add(LSTM(256, input_shape=(X.shape[1], X.shape[2])))
     model.add(Dropout(0.2))
-    # model.add(LSTM(256))
-    # model.add(Dropout(0.2))
+    model.add(LSTM(256))
+    model.add(Dropout(0.2))
     model.add(Dense(y.shape[1], activation='softmax'))
     model.compile(loss='categorical_crossentropy', optimizer='adam')
 
     if mode == 'create':
-        create_rnn(X, y)
+        create_rnn(X, y, model)
     elif mode == 'predict':
         generate(dataX, int_to_char, n_vocab, model)
 

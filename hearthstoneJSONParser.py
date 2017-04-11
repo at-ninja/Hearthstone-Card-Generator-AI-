@@ -18,10 +18,10 @@ def main(filename : str, ratingsFilename: str) -> None:
     cards.sort(key=lambda card: card['name'].lower())
 
     longest = 0
-    
-    with open(filename + '_formatted.txt', 'w') as fp:
-        for card in cards:
-            if card['name'].lower() in scores:
+    with open(filename + '_formatted_rnn.txt', 'w') as fp_2:
+        with open(filename + '_formatted.txt', 'w') as fp:
+            for card in cards:
+                
                 name = card.get('name', '')
                 attack = card.get('attack', '')
                 cardClass = card.get('cardClass', '')
@@ -33,25 +33,29 @@ def main(filename : str, ratingsFilename: str) -> None:
                 tribe = card.get('race', '')
 
                 # 0 - cost
-                # 1 - name
+                # 1 - cardClass
                 # 2 - cardType
-                # 3 - attack
-                # 4 - health
-                # 5 - rarity
-                # 6 - cardClass
+                # 3 - name
+                # 4 - attack
+                # 5 - health
+                # 6 - rarity
                 # 7 - tribe
                 # 8 - text
 
-                entry = '|0{0}|1{1}|2{2}|3{3}|4{4}|5{5}|6{6}|7{7}|8{8}'.format(cost, name, cardType, attack, health, rarity, cardClass, tribe, text)
-                
-                if len(entry) > longest:
-                    longest = len(entry)
-                    longest_entry = entry
-                
-                entry = (entry + (' ' * 160))[:160] + '\n'
-                
+                entry = '|0{0}|1{1}|2{2}|3{3}|4{4}|5{5}|6{6}|7{7}|8{8}'.format(cost, cardClass, cardType, name, attack, health, rarity, tribe, text)
 
-                fp.write(entry)
+                fp_2.write(entry + '\n')
+
+                if card['name'].lower() in scores:
+                    
+                    if len(entry) > longest:
+                        longest = len(entry)
+                        longest_entry = entry
+                    
+                    entry = (entry + (' ' * 160))[:160] + '\n'
+                    
+
+                    fp.write(entry)
     
     print('Longest entry: {}\n{}'.format(longest, longest_entry))
 

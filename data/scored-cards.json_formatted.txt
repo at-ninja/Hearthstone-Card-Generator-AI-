@@ -63,8 +63,6 @@ Avenging Wrath	101
 Avian Watcher	86
 Aviana	72
 Aya Blackpaw	123
-Aya Blackpaw	123
-Aya Blackpaw	123
 Azure Drake	114
 Babbling Book	131
 Backroom Bouncer	105
@@ -211,8 +209,6 @@ Divine Spirit	106
 Divine Strength	94
 Djinni of Zephyrs	98
 Don Han'Cho	124
-Don Han'Cho	124
-Don Han'Cho	124
 Doomguard	135
 Doomhammer	145
 Doomsayer	88
@@ -353,13 +349,9 @@ Greater Healing Potion	75
 Grim Patron	86
 Grimestreet Enforcer	113
 Grimestreet Informant	131
-Grimestreet Informant	131
-Grimestreet Informant	131
 Grimestreet Outfitter	122
 Grimestreet Pawnbroker	134
 Grimestreet Protector	156
-Grimestreet Smuggler	104
-Grimestreet Smuggler	104
 Grimestreet Smuggler	104
 Grimscale Chum	74
 Grimscale Oracle	53
@@ -432,8 +424,6 @@ Jade Idol	75
 Jade Lightning	147
 Jade Shuriken	142
 Jade Spirit	89
-Jade Spirit	89
-Jade Spirit	89
 Jade Swarmer	105
 Jeweled Scarab	117
 Jinyu Waterspeaker	129
@@ -442,10 +432,6 @@ Jungle Moonkin	89
 Jungle Panther	112
 Justicar Trueheart	92
 Kabal Chemist	107
-Kabal Chemist	107
-Kabal Chemist	107
-Kabal Courier	118
-Kabal Courier	118
 Kabal Courier	118
 Kabal Crystal Runner	83
 Kabal Lackey	72
@@ -453,8 +439,6 @@ Kabal Songstealer	124
 Kabal Talonpriest	150
 Kabal Trafficker	132
 Kara Kazham!	122
-Kazakus	162
-Kazakus	162
 Kazakus	162
 Keeper of Uldaman	151
 Keeper of the Grove	108
@@ -494,8 +478,6 @@ Loot Hoarder	113
 Lord Jaraxxus	111
 Lord of the Arena	102
 Lorewalker Cho	36
-Lotus Agents	121
-Lotus Agents	121
 Lotus Agents	121
 Lotus Assassin	120
 Lotus Illusionist	111

@@ -18,9 +18,11 @@ from keras.utils import np_utils
 def nn_model():
     #create model
     model = Sequential()
-    model.add(Dense(output_dim=160, input_dim=160, kernel_initializer='normal'))
+    model.add(Dense(output_dim=256, input_dim=160, kernel_initializer='normal'))
     model.add(Activation('relu'))
-    model.add(Dense(output_dim=100, kernel_initializer='normal'))
+    model.add(Dense(output_dim=256, kernel_initializer='normal'))
+    model.add(Activation('softmax'))
+    model.add(Dense(500))
     model.add(Activation('softmax'))
     
     

@@ -53,15 +53,15 @@ def main(input_filename, output_filename, mode):
     n_patterns = len(dataX)
 	
 	
-    X = numpy.reshape(dataX, (n_patterns, 160, 1))
+    #X = numpy.reshape(dataX, (n_patterns, 160, 1))
 
     # normalize
 
-    X = X / float(n_vocab)
+    #X = X / float(n_vocab)
 
     # one hot encode the output variable
 
-    y = np_utils.to_categorical(dataY, num_classes=100)
+    #y = np_utils.to_categorical(dataY, num_classes=100)
 
     print('Total patterns: {}'.format(n_patterns))
     print(len(dataX[0]))
@@ -79,8 +79,8 @@ def main(input_filename, output_filename, mode):
     seed = 7
     numpy.random.seed(seed)
 
-    #scale = StandardScaler()
-    #dataX = scale.fit_transform(dataX)
+    scale = StandardScaler()
+    dataX = scale.fit_transform(dataX)
 	
 
     estimator = KerasRegressor(build_fn=model, nb_epoch=100, batch_size=128, verbose=0)

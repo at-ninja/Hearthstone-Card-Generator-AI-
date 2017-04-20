@@ -32,17 +32,26 @@ def main(filename : str, ratingsFilename: str) -> None:
                 rarity = card.get('rarity', '')
                 tribe = card.get('race', '')
 
-                # 0 - cost
-                # 1 - cardClass
-                # 2 - cardType
-                # 3 - name
-                # 4 - attack
-                # 5 - health
-                # 6 - rarity
-                # 7 - tribe
+                # 0 - name
+                # 1 - tribe
+                # 2 - rarity
+                # 3 - cardClass
+                # 4 - cardType
+                # 5 - cost
+                # 6 - attack
+                # 7 - health
                 # 8 - text
 
-                entry = '|0{0}|1{1}|2{2}|3{3}|4{4}|5{5}|6{6}|7{7}|8{8}'.format(cost, cardClass, cardType, name, attack, health, rarity, tribe, text)
+                entry = '|0{0}|1{1}|2{2}|3{3}|4{4}|5{5}|6{6}|7{7}|8{8}'.format(
+                    name, 
+                    tribe, 
+                    rarity, 
+                    cardClass, 
+                    cardType, 
+                    cost, 
+                    attack, 
+                    health, 
+                    text)
 
                 fp_2.write(entry + '\n')
 
@@ -58,6 +67,7 @@ def main(filename : str, ratingsFilename: str) -> None:
                     fp.write(entry)
     
     print('Longest entry: {}\n{}'.format(longest, longest_entry))
+
 
 if __name__=='__main__':
     import sys

@@ -100,7 +100,7 @@ def main(input_filename, output_filename, mode):
 
     res = estimator.predict(X)
 
-    kfold = KFold(n_splits=10, random_state=seed)
+    #kfold = KFold(n_splits=10, random_state=seed)
 
 	
 	# --The program breaks here--

@@ -1,6 +1,7 @@
 import numpy
 from keras.models import Sequential
 from keras.layers import Dense
+from keras.layers import Activation
 from keras.wrappers.scikit_learn import KerasRegressor
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import KFold
@@ -14,6 +15,19 @@ from keras.layers import LSTM
 from keras.callbacks import ModelCheckpoint
 from keras.utils import np_utils
 
+def nn_model():
+    #create model
+    model = Sequential()
+    model.add(Dense(output_dim=160, input_dim=160, kernel_initializer='normal'))
+    model.add(Activation('relu'))
+    model.add(Dense(output_dim=100, kernel_initializer='normal'))
+    model.add(Activation('softmax'))
+    
+    
+    #compile model
+    model.compile(loss='mean_squared_error', optimizer='adam')
+
+    return model
 
 def main(input_filename, output_filename, mode):
 
@@ -49,11 +63,12 @@ def main(input_filename, output_filename, mode):
         # output is formatted 'name\tnumber' and we just want the number
         out = output[i].split('\t')[1]
         dataX.append([char_to_int[char] for char in input_data[i]])
-        dataY.append(out)
+        dataY.append(int(out))
     n_patterns = len(dataX)
+
 	
-	
-    X = numpy.reshape(dataX, (n_patterns, 160, 1))
+    X = numpy.reshape(dataX, (n_patterns, 160))
+    
 
     # normalize
 
@@ -61,33 +76,27 @@ def main(input_filename, output_filename, mode):
 
     # one hot encode the output variable
 
-    y = np_utils.to_categorical(dataY, num_classes=100)
+    y = np_utils.to_categorical(dataY, num_classes=500)
 
     print('Total patterns: {}'.format(n_patterns))
-    print(len(dataX[0]))
 
-    
-    #create model
-    model = Sequential()
-    model.add(Dense(160, input_dim=160, kernel_initializer='normal', activation='relu'))
-    model.add(Dense(100, kernel_initializer='normal'))
-    
-    
-    #compile model
-    model.compile(loss='mean_squared_error', optimizer='adam')
     
     seed = 7
     numpy.random.seed(seed)
 
     #scale = StandardScaler()
     #dataX = scale.fit_transform(dataX)
+
+    filepath = 'checkpoints/weights-improvement-Adam-{epoch:02d}-{loss:.4f}.hdf5'
+    checkpoint = ModelCheckpoint(filepath, monitor='loss', verbose=1, save_best_only=True, mode='min')
+    callbacks_list = [checkpoint]
 	
 
-    estimator = KerasRegressor(build_fn=model, nb_epoch=100, batch_size=128, verbose=0)
+    estimator = KerasRegressor(build_fn=nn_model, nb_epoch=100, batch_size=128, verbose=0)
 
-    #estimator.fit(dataX, dataY)
+    estimator.fit(X, y, epochs=20, batch_size=128, callbacks=callbacks_list)
 
-    #res = estimator.predict(dataX)
+    res = estimator.predict(X)
 
     kfold = KFold(n_splits=10, random_state=seed)
 

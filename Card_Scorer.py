@@ -52,6 +52,17 @@ def main(input_filename, output_filename, mode):
 	    dataY.append(out)
     n_patterns = len(dataX)
 	
+	
+    X = numpy.reshape(dataX, (n_patterns, 160, 1))
+
+    # normalize
+
+    X = X / float(n_vocab)
+
+    # one hot encode the output variable
+
+    y = np_utils.to_categorical(dataY, num_classes=100)
+	
     print('Total patterns: {}'.format(n_patterns))
     print(len(dataX[0]))
 
@@ -59,7 +70,7 @@ def main(input_filename, output_filename, mode):
     #create model
     model = Sequential()
     model.add(Dense(160, input_dim=160, kernel_initializer='normal', activation='relu'))
-    model.add(Dense(1, kernel_initializer='normal'))
+    model.add(Dense(100, kernel_initializer='normal'))
 	
 	
     #compile model
@@ -67,14 +78,21 @@ def main(input_filename, output_filename, mode):
 	
     seed = 7
     numpy.random.seed(seed)
+
+    #scale = StandardScaler()
+    #dataX = scale.fit_transform(dataX)
 	
     estimator = KerasRegressor(build_fn=model, nb_epoch=100, batch_size=128, verbose=0)
+
+    estimator.fit(dataX, dataY)
+
+    res = estimator.predict(dataX)
 
     kfold = KFold(n_splits=10, random_state=seed)
     
 	
 	# --The program breaks here--
-	#results = cross_val_score(estimator, dataX, dataY, cv=kfold)
+    #results = cross_val_score(estimator, dataX, dataY, cv=kfold)
     #print("Results: %.2f (%.2f) MSE" % (results.mean(), results.std()))
 	
 

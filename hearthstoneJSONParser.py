@@ -15,7 +15,7 @@ def main(filename : str, ratingsFilename: str) -> None:
     
     scores = list(map(lambda card: card['Name'].lower(), scores))
 
-    cards.sort(key=lambda card: card['name'].lower())
+    cards_sorted = sorted(cards, key=lambda card: card['name'].lower())
 
     longest = 0
     with open(filename + '_formatted_rnn.txt', 'w') as fp_2:

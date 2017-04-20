@@ -5,6 +5,7 @@ from keras.layers import Dropout
 from keras.layers import LSTM
 from keras.callbacks import ModelCheckpoint
 from keras.utils import np_utils
+from copy import deepcopy
 
 
 def main(filename, mode):
@@ -82,26 +83,39 @@ def create_rnn(X, y, model):
 def generate(dataX, int_to_char, n_vocab, model):
 
     # load the network weights
-    filename = "checkpoints/weights-improvement-19-0.7472.hdf5"
+    filename = "checkpoints/weights-improvement-19-0.7811.hdf5"
     model.load_weights(filename)
     model.compile(loss='categorical_crossentropy', optimizer='adam')
     # pick a random seed
     start = numpy.random.randint(0, len(dataX)-1)
-    pattern = dataX[start]
-    print("Seed:")
-    print("\"" + ''.join([int_to_char[value] for value in pattern]) + "\"")
-    # generate characters
-    for i in range(1000):
-        x = numpy.reshape(pattern, (1, len(pattern), 1))
-        x = x / float(n_vocab)
-        prediction = model.predict(x, verbose=0)
-        index = numpy.argmax(prediction)
-        result = int_to_char[index]
-        seq_in = [int_to_char[value] for value in pattern]
-        print(result, end='')
-        pattern.append(index)
-        pattern = pattern[1:len(pattern)]
-    print("\nDone.")
+    
+    for diversity in [0.2, 0.5, 1.0, 1.2]:
+        pattern = deepcopy(dataX[start])
+
+        print("Diversity: {} Seed:".format(diversity))
+        print("\"" + ''.join([int_to_char[value] for value in pattern]) + "\"")
+
+        # generate characters
+        for i in range(1000):
+            x = numpy.reshape(pattern, (1, len(pattern), 1))
+            x = x / float(n_vocab)
+            prediction = model.predict(x, verbose=0)
+            index = sample(prediction, diversity)
+            result = int_to_char[index]
+            seq_in = [int_to_char[value] for value in pattern]
+            print(result, end='')
+            pattern.append(index)
+            pattern = pattern[1:len(pattern)]
+        print("\nDone.")
+
+def sample(preds, temperature=1.0):
+    # helper function to sample an index from a probability array
+    preds = numpy.asarray(preds).astype('float64')
+    preds = numpy.log(preds) / temperature
+    exp_preds = numpy.exp(preds)
+    preds = exp_preds / numpy.sum(exp_preds)
+    probas = numpy.random.multinomial(1, preds[0], 1)
+    return numpy.argmax(probas)
 
 
 if __name__=='__main__':

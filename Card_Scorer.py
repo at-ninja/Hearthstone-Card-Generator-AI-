@@ -71,8 +71,8 @@ def main(input_filename, output_filename, mode):
     model = Sequential()
     model.add(Dense(160, input_dim=160, kernel_initializer='normal', activation='relu'))
     model.add(Dense(100, kernel_initializer='normal'))
-	
-
+    
+    
     #compile model
     model.compile(loss='mean_squared_error', optimizer='adam')
     
@@ -82,6 +82,7 @@ def main(input_filename, output_filename, mode):
     #scale = StandardScaler()
     #dataX = scale.fit_transform(dataX)
 	
+
     estimator = KerasRegressor(build_fn=model, nb_epoch=100, batch_size=128, verbose=0)
 
     #estimator.fit(dataX, dataY)
@@ -89,7 +90,7 @@ def main(input_filename, output_filename, mode):
     #res = estimator.predict(dataX)
 
     kfold = KFold(n_splits=10, random_state=seed)
-    
+
 	
 	# --The program breaks here--
     #results = cross_val_score(estimator, dataX, dataY, cv=kfold)

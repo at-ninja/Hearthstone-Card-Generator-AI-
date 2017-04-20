@@ -29,7 +29,7 @@ def main(filename, mode):
 
     # prepare the dataset of input to output pairs encoded as integers
 
-    seq_length = 100
+    seq_length = 50
     dataX = []
     dataY = []
     for i in range(0, n_chars - seq_length, 1):
@@ -77,7 +77,7 @@ def create_rnn(X, y, model):
     checkpoint = ModelCheckpoint(filepath, monitor='loss', verbose=1, save_best_only=True, mode='min')
     callbacks_list = [checkpoint]
 
-    model.fit(X, y, epochs=20, batch_size=128, callbacks=callbacks_list)
+    model.fit(X, y, epochs=50, batch_size=50, callbacks=callbacks_list)
 
 
 def generate(dataX, int_to_char, n_vocab, model):

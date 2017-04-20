@@ -77,7 +77,7 @@ def create_rnn(X, y, model):
     checkpoint = ModelCheckpoint(filepath, monitor='loss', verbose=1, save_best_only=True, mode='min')
     callbacks_list = [checkpoint]
 
-    model.fit(X, y, epochs=50, batch_size=50, callbacks=callbacks_list)
+    model.fit(X, y, validation_split=0.1, epochs=50, batch_size=50, callbacks=callbacks_list)
 
 
 def generate(dataX, int_to_char, n_vocab, model):

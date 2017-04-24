@@ -18,11 +18,11 @@ from keras.utils import np_utils
 def nn_model():
     #create model
     model = Sequential()
-    model.add(Dense(output_dim=256, input_dim=160, kernel_initializer='normal'))
+    model.add(Dense(output_dim=10, input_dim=160, kernel_initializer='normal'))
     model.add(Activation('relu'))
-    model.add(Dense(output_dim=256, kernel_initializer='normal'))
+    model.add(Dense(output_dim=10, kernel_initializer='normal'))
     model.add(Activation('softmax'))
-    model.add(Dense(500))
+    model.add(Dense(1))
     model.add(Activation('softmax'))
     
     
@@ -100,7 +100,7 @@ def main(input_filename, output_filename, mode):
 
     estimator = KerasRegressor(build_fn=nn_model, nb_epoch=100, batch_size=128, verbose=0)
 
-    estimator.fit(X, y, epochs=20, batch_size=128, callbacks=callbacks_list)
+    estimator.fit(X, dataY, epochs=20, batch_size=128, callbacks=callbacks_list)
 
     res = estimator.predict(X)
 

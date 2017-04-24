@@ -82,6 +82,8 @@ def main(input_filename, output_filename, mode):
     #y = np_utils.to_categorical(dataY, num_classes=100)
 
     y = np_utils.to_categorical(dataY, num_classes=500)
+	
+	y2 = [x/max(dataY) for x in dataY]
 
 	
     print('Total patterns: {}'.format(n_patterns))

@@ -1,0 +1,105 @@
+|0araaen saneer|1|2common|3neutral|4minion|53|62|72|8battlecry: give a friendly minion +1/+1.
+|0care ti the woah|1|2common|3neutral|4minion|53|62|72|8battlecry: dial 2 damage to all enemy minion.
+|0doame oa the eare|1|2rare|3neutral|4minion|53|62|72|8battlecry: dial 2 damage to all enemy minion.
+|0silde oi the eros|1|2common|3neutral|4minion|53|62|73|8battlecry: geve a friendly minion +2/+1.
+|0fooere tante|1|2epic|3neutral|4minion|53|62|72|8battlecry: deal 1 damage to all enemy minion.
+|0elime tantei|1|2common|3neutral|4minion|53|62|71|8battlecry: give a friendly minion +2/+1.
+|0seade onotoi|1|2common|3neutral|4minion|54|63|72|8battlecry: discover a spell.
+|0farel sorron|1|2common|3neutral|4minion|53|62|71|8battlecry: sevefle a minion in your hand.
+|0pareln sf the blament|1|2rare|3neutral|4minion|55|63|73|8battlecry: deal 2 damage to a minion.
+|0karee si the caree|1|2common|3peutral|4minion|53|62|72|8battlecry: discover a ceast.
+|0braale of the eart|1|2common|3neutral|4minion|53|62|71|8battlecry: dial 1 damage to all enemy minion.
+|0feaase alart|1|2rare|3neutral|4minion|52|62|72|8battlecry: give your opponent's heno.
+|0viadoe tia haalen|1|2common|3neutral|4minion|52|62|72|8battlecry: deal 2 damage to all enemy minion.
+|0sindlt of the clan|1|2common|3neutral|4minion|53|62|72|8battlecry: gfve a friendly minion +2/+2.
+|0fana of the wia |1|2common|3neutral|4minion|53|61|73|8battlecry: destroy a minion.
+|0soldoe rh the wia |1|2common|3neutral|4minion|53|63|73|8battlecry: dial 2 damage to a minion.
+|0derit oa the |otr|1|2common|3neutral|4minion|51|62|72|8battlecry: discover a spell.
+|0marere ten harkene|1|2common|3neutral|4minion|52|61|71|8battlecry: give a friendly minion +2 httack.
+|0sarler oa the cnamen|1|2common|3neutral|4minion|53|62|72|8battlecry: divcover a health.
+|0shrel sf the brss|1|2common|3neutral|4minion|56|64|74|8battlecry: gfve a friendly minion +3/+2.
+|0alaoa tf the boamt|1|2common|3neutral|4minion|52|62|72|8battlecry: dial 2 damage to all enemy minion.
+|0baro taale|1|2common|3neutral|4minion|53|63|72|8bettlecry: give a random criendly minion +1/+1.
+|0fooel of the brar|1|2rare|3warlock|4spell|51|6|7|8deal $2 damage to all minions.
+|0bnoal of the wia |1|2common|3neutral|4minion|52|62|71|8battlecry: deal 2 damage to all enemy minion.
+|0reneer of the barnn|1|2rare|3warlock|4spell|51|6|7|8deal $3 damage to all minions.
+|0sialoeon senper|1|2eoic|3paladin|4spell|51|6|7|8deal $2 damage to all minions.
+|0bnoaen of the earent|1|2common|3neutral|4minion|53|63|73|8battlecry: give a friendly minion +1/+2.
+|0phidle tenter|1|2rare|3peutral|4minion|53|63|72|8battlecry: geve a friendly minion +2/+2.
+|0farks dlalent|1|2rare|3neutral|4minion|52|62|71|8battlecry: give your opponent's deck. gf your hand +2/+1.
+|0muire of the boamt|1|2common|3neutral|4minion|53|62|71|8battlecry: give a friendly minion with taunt.
+|0dlaelt oe the bard|1|2common|3neutral|4minion|52|62|72|8battlecry: deal 1 damage to all enemy minion.
+|0fere of the cnast|1|2rare|3warlock|4spell|51|6|7|8deal $3 damage to all minions.
+|0booare toe lanee|1|2common|3warlock|4spell|52|6|7|8deal $3 damage to all minions.
+|0siedlt si the wirt|1|2rare|3neutral|4minion|55|63|73|8battlecry: give a friendly minion +4/+1.
+|0cark ta the hare|1|2common|3neutral|4minion|54|63|72|8battlecry: give a friendly minion +2 attack.
+|0whrteo of the karh|1|2common|3neutral|4minion|55|63|72|8battlecry: dial 2 damage to all enemy minion.
+|0foame th the whle|1|2common|3neutral|4minion|53|62|72|8battlecry: give a friendly minion +2/+1.
+|0fanai toane|1|2common|3neutral|4minion|53|62|71|8battlecry: give a friendly minion +2/+2.
+|0fark of the bardnt|1|2common|3neutral|4minion|53|63|74|8battlecry: dial 2 damage to a minion.
+|0konele sooget|1|2common|3neutral|4minion|53|62|71|8battlecry: destroy a minion.
+|0furan carke|1|2eoic|3neutral|4minion|55|63|74|8battlecry: gfve a friendly minion +2/+1.
+|0cuole tie lare|1|2rare|3peutral|4minion|51|62|71|8battlecry: discover a spell.
+|0pemelt of colse|1|2common|3neutral|4minion|53|62|72|8battlecry: gfve a friendly minion in your hand.
+|0toame of the eloss|1|2common|3neutral|4minion|53|62|71|8battlecry: give a friendly minion +1/+1.
+|0fanel cooeeare|1|2common|3neutral|4minion|55|63|74|8battlecry: give a friendly minion with taunt.
+|0alarten of the boart|1|2rare|3meutral|4minion|53|61|72|8battlecry: deal 1 damage to a minion.
+|0shndl sa the elanent|1|2rare|3neutral|4minion|56|63|75|8battlecry: discover a menion.
+|0elamene thner|1|2common|3peutral|4minion|54|61|72|8battlecry: destroy a minion. give a random mrnendly minion.
+|0araane toe tie lnrer|1|2epic|3neutral|4minion|53|62|73|8battlecry: destroy a minion.
+|0shnelt of hnel|1|2common|3neutral|4minion|53|61|73|8battlecry: give a friendly minion with a tpell, dain +2/+1.
+|0sertee thri|1|2common|3neutral|4minion|55|62|75|8battlecry: dial 1 damage to a random enemy minion.
+|0feaal sa the bra|1|2rare|3warlock|4spell|52|6|7|8deal $2 damage to all minions.
+|0wiadeg thnee|1|2rare|3warlock|4spell|52|6|7|8deal $2 damage to all minions.
+|0siita sf the riren|1|2common|3neutral|4minion|53|63|72|8battlecry: destroy a minion.
+|0alame ieleer|1|2rare|3neutral|4minion|51|61|72|8battlecry: discover a mana crystal.
+|0silter of the gare|1|2common|3warlock|4spell|51|6|7|8deal $3 damage.
+|0sardie woor|1|2common|3neutral|4minion|53|62|72|8battlecry: dial 2 damage to a random enemy minion.
+|0soale ti the hanen|1|2common|3neutral|4minion|51|62|71|8battlecry: deal 1 damage to all enemy minion with taunt.
+|0aarkis sf the earenin|1|2common|3neutral|4minion|53|62|73|8battlecry: discover a meneon.
+|0farkana sentei|1|2eree|3peutral|4minion|56|65|75|8battlecry: deal 1 damage to all enemy minion.
+|0fare closein|1|2common|3neutral|4minion|52|62|71|8battlecry: give your opponent's ceakth.
+|0soidede roane|1|2epic|3neutral|4minion|55|62|72|8battlecry: summon a 1/1 suelan.
+|0lonme rf the nire|1|2common|3neutral|4minion|55|63|74|8battlecry: discover a ppell.
+|0saneer of the kare|1|2rare|3pautral|4minion|51|61|73|8battlecry: dial 2 damage.
+|0still of the wile|1|2rare|3warlock|4spell|51|6|7|8deal $2 damage to all minions in your hand.
+|0flree soallnn|1|2common|3neutral|4minion|53|63|72|8battlecry: give a friendly minion +2/+2.
+|0fart of the kare|1|2common|3neutral|4minion|53|63|72|8battlecry: dial 2 damage.
+|0soaroeonn sattee|1|2rare|3neutral|4minion|53|62|72|8battlecry: summon a 1/1 sprmi.
+|0mana toa raeee|1|2rare|3neutral|4minion|54|62|73|8cattlecry: destroy a minion. gein +1/+1.
+|0farke th the carde|1|2common|3neutral|4minion|53|62|72|8battlecry: give a friendly minion with taunt.
+|0siide sa the tirt|1|2common|3neutral|4minion|53|62|72|8battlecry: give a friendly minion in your hand.
+|0carel tanee|1|2common|3neutral|4minion|53|61|74|8battlecry: give a friendly minion with taunt.
+|0siltea boastoi|1|2common|3neutral|4minion|53|61|71|8battlecry: summon a 1/1 wreme.
+|0siadoer sf the eara|1|2rare|3paladin|4spell|52|6|7|8deal $2 damage to all enemy minion.
+|0anrer th the riee|1|2common|3warlock|4spell|51|6|7|8deal $3 damage to all minions.
+|0sieent of the eros|1|2common|3neutral|4minion|55|61|75|8battlecry: give a random minion in your hand.
+|0poltei taate|1|2common|3neutral|4minion|53|62|73|8battlecry: ifve a friendly minion +2/+2.
+|0frrel oa the eooe|1|2common|3neutral|4minion|52|61|71|8battlecry: destroy a minion. deal $2 damage to all oinions.
+|0anare oooter|1|2common|3neutral|4minion|53|62|72|8battlecry: dial 2 damage to a random enemy minion.
+|0craaeer of the coaeent|1|2common|3neutral|4minion|53|62|72|8battlecry: destroy a minion. discover a mandot enemy.
+|0feri th the sned|1|2common|3peutral|4minion|54|62|72|8battlecry: give your opponent haal damage to all minions.
+|0garue tatei|1|2common|3neutral|4minion|53|62|71|8battlecry: deal 1 damage to a minion.
+|0boamed crloant|1|2rare|3peutral|4minion|55|62|72|8battlecry: summon a 1/1 strmr honm.
+|0carhe sh the cname|1|2rare|3warlock|4spell|53|6|7|8deal $2 damage to all minions.
+|0alrii sf the snrt|1|2rare|3neutral|4minion|53|62|72|8battlecry: deal 2 damage to a minion.
+|0silees of the ears|1|2common|3neutral|4minion|52|62|74|8battlecry: discover a spell.
+|0foamen wie cnasiir|1|2common|3neutral|4minion|53|61|72|8battlecry: dial 2 damage to all minions.
+|0rilter of the hare|1|2common|3neutral|4minion|53|62|72|8battlecry: give a friendly minion +2/+1.
+|0blase the lare|1|2common|3neutral|4minion|56|64|75|8battlecry: dial 2 damage to all enemy minion.
+|0konio wirioes|1|2eric|3neutral|4minion|52|62|72|8battlecry: iive a random friendly minion into your hend.
+|0braaet of the wier|1|2rare|3neutral|4minion|53|62|71|8battlecry: destroy a minion. give your opponent's deck.
+|0loila of the elament|1|2common|3peutral|4minion|53|62|72|8battlecry: destroy a minion.
+|0gele of the boale|1|2common|3neutral|4minion|51|62|72|8battlecry: iive a friendly minion +1/+1.
+|0rardoi th the eark|1|2rare|3warlock|4spell|53|6|7|8deal $3 damage to all enemy minion.
+|0penea guoee|1|2rare|3warlock|4spell|51|6|7|8deal $3 damage to all minions.
+|0feret of the wie onns|1|2epee|3peutral|4minion|55|63|73|8battlecry: destroy a minion. iain +2/+1.
+|0fenel toiee|1|2common|3neutral|4minion|53|62|72|8battlecry: give a friendly minion in your hand.
+|0shlteira coamant|1|2common|3neutral|4minion|51|62|73|8battlecry: give a friendly minion +1/+2.
+|0whare toe arlst|1|2common|3neutral|4minion|53|63|73|8battlecry: destroy a minion.
+|0ferrii tea she rrer|1|2common|3neutral|4minion|53|62|73|8battlecry: destroy a minion.
+|0fare of the rire|1|2common|3neutral|4minion|51|62|72|8battlecry: give your oenions +3/+1.
+|0goott of the boame|1|2common|3neutral|4minion|53|63|72|8battlecry: dial 2 damage to a random enemy minion.
+|0sialen tia seutee|1|2common|3neutral|4minion|53|61|73|8battlecry: give a friendly minion +2/+1.
+|0alage trir|1|2common|3neutral|4minion|53|62|73|8battlecry: deal 2 damage to a minion.
+|0wildet of the boaeent|1|2rare|3neutral|4minion|53|63|72|8battlecry: summon a 1/1 certse minion.

@@ -83,20 +83,20 @@ def create_rnn(X, y, model):
 def generate(dataX, int_to_char, n_vocab, model):
 
     # load the network weights
-    filename = "checkpoints/weights-improvement-19-0.7811.hdf5"
+    filename = "checkpoints/weights-improvement-12-1.0078.hdf5"
     model.load_weights(filename)
     model.compile(loss='categorical_crossentropy', optimizer='adam')
     # pick a random seed
     start = numpy.random.randint(0, len(dataX)-1)
     
-    for diversity in [0.2, 0.5, 1.0, 1.2]:
+    for diversity in [0.3]:
         pattern = deepcopy(dataX[start])
 
-        print("Diversity: {} Seed:".format(diversity))
-        print("\"" + ''.join([int_to_char[value] for value in pattern]) + "\"")
+        # print("Diversity: {} Seed:".format(diversity))
+        # print("\"" + ''.join([int_to_char[value] for value in pattern]) + "\"")
 
         # generate characters
-        for i in range(1000):
+        for i in range(10000):
             x = numpy.reshape(pattern, (1, len(pattern), 1))
             x = x / float(n_vocab)
             prediction = model.predict(x, verbose=0)
@@ -106,7 +106,7 @@ def generate(dataX, int_to_char, n_vocab, model):
             print(result, end='')
             pattern.append(index)
             pattern = pattern[1:len(pattern)]
-        print("\nDone.")
+        # print("\nDone.")
 
 def sample(preds, temperature=1.0):
     # helper function to sample an index from a probability array

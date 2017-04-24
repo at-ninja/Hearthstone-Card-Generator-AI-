@@ -21,13 +21,13 @@ def nn_model():
     model.add(Dense(output_dim=10, input_dim=160, kernel_initializer='normal'))
     model.add(Activation('relu'))
     model.add(Dense(output_dim=10, kernel_initializer='normal'))
-    model.add(Activation('softmax'))
+    model.add(Activation('relu'))
     model.add(Dense(1))
-    model.add(Activation('softmax'))
+    model.add(Activation('sigmoid'))
     
     
     #compile model
-    model.compile(loss='mean_squared_error', optimizer='adam')
+    model.compile(loss='binary_crossentropy', optimizer='adam')
 
     return model
 
@@ -83,7 +83,10 @@ def main(input_filename, output_filename, mode):
 
     y = np_utils.to_categorical(dataY, num_classes=500)
 	
-	y2 = [x/max(dataY) for x in dataY]
+    y2 = [x/max(dataY) for x in dataY]
+
+    print(dataX)
+    print(y2)
 
 	
     print('Total patterns: {}'.format(n_patterns))
@@ -99,12 +102,12 @@ def main(input_filename, output_filename, mode):
     checkpoint = ModelCheckpoint(filepath, monitor='loss', verbose=1, save_best_only=True, mode='min')
     callbacks_list = [checkpoint]
 
+    model = nn_model()
 
-    estimator = KerasRegressor(build_fn=nn_model, nb_epoch=100, batch_size=128, verbose=0)
 
-    estimator.fit(X, dataY, epochs=20, batch_size=128, callbacks=callbacks_list)
+    model.fit(X, y2, epochs=20, batch_size=128, callbacks=callbacks_list)
 
-    res = estimator.predict(X)
+    res = model.predict(X)
 
     #kfold = KFold(n_splits=10, random_state=seed)
 
